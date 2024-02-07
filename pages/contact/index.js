@@ -70,7 +70,7 @@ const Contact = () => {
             exit='hidden'
             className=' mx-auto xl:mx-0 mb-6  xl:px-0'
           >
-           Let's get in touch or Email me directly on <span className='font-bold text-[#e6e6e6]'>
+           Let&apos;s get in touch or Email me directly on <span className='font-bold text-[#e6e6e6]'>
             <a href='mailto:rajatag.work@gmail.com'> rajatag.work@gmail.com</a>
           </span>
           </motion.p> 
@@ -122,7 +122,7 @@ const Contact = () => {
               isLoading= {isLoading}
             > 
               <span className='group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500'>
-                Let's talk
+                Let&apos;s talk
               </span>
               <BsArrowRight className='-translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]' />
             </button>
