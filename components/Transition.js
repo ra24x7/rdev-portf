@@ -1,26 +1,14 @@
 // framer motion
 import { motion } from 'framer-motion';
 
-
 const Transition = () => {
   return (
-    <>
-      <motion.div
-        className='fixed top-0 left-0 w-full h-screen bg-[#0f0f0f] transition-transform origin-bottom'
-       
-        initial={{scaleY: 0}}
-        animate= {{scaleY: 0}}
-        exit={{scaleY: 1}}
-      ></motion.div>
-
-      <motion.div
-        className='fixed top-0 left-0 w-full h-screen bg-[#0f0f0f] transition-transform origin-top'
-        initial={{scaleY: 1}}
-        animate= {{scaleY: 0}}
-        exit={{scaleY: 1}}
-      ></motion.div>
-
-    </>
+    <motion.div
+      className='fixed inset-0 bg-[#0f0f0f] pointer-events-none z-40'
+      initial={{ opacity: 1 }}
+      animate={{ opacity: 0, transition: { duration: 0.6, ease: 'easeOut', delay: 0.1 } }}
+      exit={{ opacity: 1, transition: { duration: 0.4, ease: 'easeIn' } }}
+    />
   );
 };
 

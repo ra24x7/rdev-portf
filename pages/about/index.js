@@ -1,70 +1,54 @@
 import React, { useState } from 'react';
 
-// icons
-import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaWordpress,
-  FaFigma,
-} from 'react-icons/fa';
-
-import {
-  SiNextdotjs,
-  SiFramer,
-  SiAdobexd,
-  SiAdobephotoshop,
-} from 'react-icons/si';
-
 //  about data
 export const aboutData = [
   {
     title: 'Skills',
     info: [
       {
-        title: 'Web Development',
-        icons: [
-          'HTML•',
-         'CSS•',
-          'JAVASCRIPT•',
-          'REACT.JS•',
-          'NEXT.JS•',
-      
-        
-        ],
+        title: 'Languages',
+        icons: ['Python•', 'JavaScript•', 'TypeScript•', 'SQL•'],
       },
       {
-        title: 'Design',
-        icons: ['UI/UX', 'Figma', 'Illustrator'],
+        title: 'AI / LLM',
+        icons: ['LangGraph•', 'RAG•', 'Azure OpenAI•', 'pgvector•', 'LlamaParse•', 'Cohere•'],
       },
-
       {
-        title: 'Digital Marketing',
-        icons: ['SEO', 'Social Media', 'Email Marketing'],
+        title: 'Backend',
+        icons: ['FastAPI•', 'Node.js•', 'GraphQL•', 'Redis Streams•', 'SQLAlchemy•'],
       },
-
-     
+      {
+        title: 'Cloud & DevOps',
+        icons: ['Azure•', 'AWS•', 'Docker•', 'KEDA•', 'GitHub Actions•'],
+      },
+      {
+        title: 'Databases',
+        icons: ['PostgreSQL•', 'MongoDB•', 'DynamoDB•', 'Redis•', 'Milvus•', 'OpenSearch•'],
+      },
+      {
+        title: 'Frontend',
+        icons: ['Next.js•', 'React•', 'Redux Toolkit•', 'TanStack Query•', 'Tailwind CSS•'],
+      },
     ],
   },
- 
+
   {
-    title: 'experience',
+    title: 'Experience',
     info: [
       {
-        title: 'Design Head & Web Developer',
-        company: 'We Solve Digital',
-        stage: '2022 - 2023',
+        title: 'AI Software Engineer',
+        company: 'MAindTec GmbH — Remote, Germany',
+        stage: 'Mar 2025 – Present',
       },
       {
-        title: 'UI/UX Designer',
-        company: 'Phalano Job',
-        stage: '2022 - 2023',
+        title: 'Fullstack Engineer',
+        company: 'Phalano Job — Kathmandu, Nepal',
+        stage: 'Aug 2023 – Feb 2025',
       },
       {
-        title: 'Freelance Web Developer',
-        company: 'Freelance',
-        stage: '2019 - Present',
+        title: 'Web Developer',
+        company: 'We Solve Digital — Remote, India',
+        stage: 'Jan 2023 – Jun 2023',
       },
     ],
   },
@@ -72,40 +56,18 @@ export const aboutData = [
   {
     title: 'Education',
     info: [
-
       {
-        title: 'MBA -Finance',
-        company: 'Department of Management Sciences (PUMBA)',
-        stage: 'INDIA'
+        title: 'MBA in Finance',
+        company: 'DMS, PUMBA — Pune',
+        stage: '2018 – 2020',
       },
-
       {
-        title: 'B.Tech - Computer Science',
-        company: 'Maulana Azad National Institute of Technology',
-        stage: 'INDIA'
+        title: 'B.Tech in Computer Science & Engineering',
+        company: 'NIT Bhopal',
+        stage: '2014 – 2018',
       },
-
-      
-      
-     
     ],
   },
-  {
-  title: 'Certificates',
-  info: [
-
-    {
-      title: 'MBA -Finance - DMS, Pune',
-      stage: '2020',
-    },
-
-    {
-      title: 'B.Tech - Computer Science - NIT, Bhopal',
-      stage: '2018',
-    },
-   
-  ],
-},
 ];
 
 
@@ -120,7 +82,7 @@ const About = () => {
   const [index, setIndex] = useState(0);
   console.log(index);
   return (
-    <div className='h-full bg-primary/30 py-32 text-center xl:text-left overflow-y-auto z-0 '>
+    <div className='h-full bg-primary/60 py-32 text-center xl:text-left overflow-hidden z-0'>
       
       <div className='container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6 mb-[150px]'>
         {/* text */}
@@ -142,7 +104,7 @@ const About = () => {
             exit='hidden'
             className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'
           >
-            Back in 2012, I decided to try my hand at creating custom Tumblr themes and tumbled head first into the rabbit hole of coding and web development. Fast-forward to today, and Ive had the privilege of building software for an advertising agency, a start-up, a student-led design studio, and a huge corporation. When Im not at the computer, Im usually rock climbing, hanging out with my wife and two cats, or running around Hyrule searching for Korok seeds
+            AI Software Engineer with 3+ years of experience building LLM systems, RAG pipelines, and scalable backend infrastructure. I specialize in agentic AI workflows with LangGraph, cloud-native backends on Azure and AWS, and full-stack development. When I&apos;m not at the computer, I&apos;m reading classics or psychology books, or travelling somewhere new.
 
 
           </motion.p>
@@ -164,7 +126,7 @@ const About = () => {
           initial='hidden'
           animate='show'
           exit='hidden'
-          className='flex flex-col w-full xl:max-w-[48%] h-[400px]'
+          className='flex flex-col w-full xl:max-w-[48%] h-[480px]'
         >
           <div className='flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4'>
             {aboutData.map((item, itemIndex) => {
@@ -183,13 +145,13 @@ const About = () => {
             })}
           </div>
 
-          <div className='py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start'>
+          <div className='py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start overflow-y-auto scrollbar-thin scrollbar-thumb-accent/30 scrollbar-track-transparent flex-1'>
             {aboutData[index].info.map((item, itemIndex) => {
               return (
                 <div
                   key={itemIndex}
                   // className='flex-1 flex flex-col md:flex-col md:items-left max-w-max gap-x-2 text-white/60'
-                  className='flex-1 flex flex-col md:flex-col md:items-left w-[400px] gap-x-2  border border-white/10  px-8 py-3 opacity-[85%] rounded-[15px] bg-[#1a1a1a]  transition-all duration-300  overflow-hidden group'
+                  className='flex flex-col items-start w-[400px] border border-white/10 px-8 py-3 opacity-[85%] rounded-[15px] bg-[#1a1a1a] transition-all duration-300 group'
                 >
                   {/* title */}
                   <div className=' text-[16px] text-white/100 font-light md:mb-0'>{item.title} </div>
@@ -197,12 +159,13 @@ const About = () => {
                   <div className='text-[14px]   font-light text-white/60 '>{item.company}</div>
                   <div className='text-[12px]   font-light text-white/40 '>{item.stage}</div>
                   
-                  <div className=' flex   py-2 overflow-hidden group'>
-                    {/* icons */}
-                    {item.icons?.map((icon, itemIndex) => {
-                      return <div key = {itemIndex} className='text-white/60  px-1  text-xs font-medium  ' >{icon}</div>;
-                    })}
-                  </div>
+                  {item.icons?.length > 0 && (
+                    <div className='flex flex-wrap gap-x-1 gap-y-1 pt-2'>
+                      {item.icons.map((icon, itemIndex) => (
+                        <span key={itemIndex} className='text-white/60 text-xs font-medium whitespace-nowrap'>{icon}</span>
+                      ))}
+                    </div>
+                  )}
                 </div>
               );
             })}

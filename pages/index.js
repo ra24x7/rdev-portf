@@ -2,38 +2,32 @@
 import Image from 'next/image';
 import Typewriter from 'typewriter-effect';
 
-
-
 // icons
 import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
+  FaPython,
+  FaDocker,
+  FaNodeJs,
   FaReact,
-  FaWordpress,
-  FaFigma,
-  
- 
-  
-  
+  FaAws,
 } from 'react-icons/fa';
 
 import {
-
   SiTypescript,
   SiNextdotjs,
-
+  SiFastapi,
+  SiMicrosoftazure,
 } from 'react-icons/si';
 
 const iconNames = [
-  <FaFigma key="figma"/> ,
-  <FaHtml5 key="html5" />,
-  <FaCss3 key="css3" />,
-  <FaJs key="js" />,
-  // <SiTypescript key="typescript" />,
+  <FaPython key="python" />,
+  <SiTypescript key="typescript" />,
+  <SiFastapi key="fastapi" />,
+  <FaNodeJs key="nodejs" />,
   <FaReact key="react" />,
   <SiNextdotjs key="nextjs" />,
-  
+  <FaDocker key="docker" />,
+  <SiMicrosoftazure key="azure" />,
+  <FaAws key="aws" />,
 ];
 
 // components
@@ -72,7 +66,7 @@ const Home = () => {
             <span className='text-accent'  >
               <Typewriter
                 options={{
-                  strings: ['Designer', 'Developer'],
+                  strings: ['AI Engineer', 'Backend Developer'],
                   autoStart: true,
                   loop: true,
                   delay: 100,
@@ -89,11 +83,11 @@ const Home = () => {
             exit='hidden'
             className='text-xl'
           >
-            Designer & Web Developer
+            AI Software Engineer
 
           </motion.h3>
 
-          
+
           <motion.p
             variants={fadeIn('down', 0.4)}
             initial='hidden'
@@ -101,10 +95,7 @@ const Home = () => {
             exit='hidden'
             className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16'
           >
-             <br />Hello, I am Rajat, a passionate and experienced web developer and designer from India. I blend code and creativity to craft extraordinary digital experiences. Let us create the future of the web together.
-              {/* Im a bookworm, constantly hungry for new knowledge, 
-              and I find peace in the tunes of music.  */}
-              Dont hesitate to get in touch!
+            <br />Hi, I am Rajat — an AI Software Engineer with 3+ years of experience building LLM systems, RAG pipelines, and scalable backend infrastructure. I specialize in agentic AI workflows, cloud-native backends on Azure and AWS, and full-stack development. Don&apos;t hesitate to get in touch!
           </motion.p>
 
           {/* btn */}

@@ -8,18 +8,18 @@ import { fadeIn } from '../../variants';
 
 const Work = () => {
   return (
-    <div className='h-full bg-primary/30 my-20 flex items-center overflow-y-auto z-0 '>
-   
+    <div className='h-full bg-primary/60 flex items-center overflow-y-auto z-0'>
+
       <div className='container mx-auto'>
-        <div className='flex  flex-col xl:flex-row gap-x-8'>
+        <div className='flex flex-col xl:flex-row gap-x-8 items-center'>
           {/* text */}
-          <div className='text-center flex xl:w-[30vw] lg:text-left mb-4 flex-1  flex-col justify-center'>
+          <div className='text-center flex xl:w-[30vw] lg:text-left mb-4 flex-col justify-center'>
             <motion.h2
               variants={fadeIn('up', 0.2)}
               initial='hidden'
               animate='show'
               exit='hidden'
-              className='h2 xl:mt-12'
+              className='h2'
             >
               My work <span className='text-accent'>.</span>
             </motion.h2>
@@ -30,8 +30,7 @@ const Work = () => {
               exit='hidden'
               className='mb-4 max-w-[400px] mx-auto lg:mx-0'
             >
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. A
-              eveniet dignissimos distinctio tempore harum laudantium.
+              Production systems built across AI SaaS, distributed job platforms, and cloud infrastructure.
             </motion.p>
           </div>
 
