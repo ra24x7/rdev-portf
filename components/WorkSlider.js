@@ -6,6 +6,7 @@ export const workSlider = {
         {
           title: 'MAiQ — AI SaaS Platform',
           path: '/maiq-thumb.png',
+          videoPath: '/maiq-demo-clip.webm',
           description: 'Multi-tenant AI SaaS with LangGraph agents, hybrid RAG pipeline, and Azure cloud infrastructure.',
           stack: ['Python', 'FastAPI', 'LangGraph', 'pgvector', 'Azure', 'PostgreSQL', 'Redis'],
           url: 'https://maiq.maindtec.ai/',
@@ -69,8 +70,21 @@ const WorkSlider = () => {
                       className='relative rounded-lg overflow-hidden flex flex-col items-center justify-center group cursor-pointer'
                     >
                       <div className='flex flex-col items-center justify-center relative overflow-hidden group'>
-                        {/* image */}
-                        <Image src={image.path} width={800} height={400} alt='' />
+                        {/* image or video */}
+                        {image.videoPath ? (
+                          <video
+                            src={image.videoPath}
+                            width={800}
+                            height={400}
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className='w-full h-auto'
+                          />
+                        ) : (
+                          <Image src={image.path} width={800} height={400} alt='' />
+                        )}
                         {/* overlay gradient */}
                         <div className='absolute inset-0 bg-gradient-to-l from-transparent via-[#5b34d2] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700'></div>
                         {/* overlay content */}
